@@ -23,7 +23,7 @@ router.get("/:id", (req, res) => {
   db
     .findById(userId)
     .then(user => {
-      res.json({ user });
+      res.json({ user });  //res.json(response[0])
     })
     .catch(err => {
       res.status(404).json({
